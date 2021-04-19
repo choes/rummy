@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Client } from "boardgame.io/react";
+import { Debug } from "boardgame.io/debug"
+import { Local } from "boardgame.io/multiplayer"
+import { default as Rummy } from "./Rummy";
+import { default as RummyBoard } from "./RummyBoard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = Client({
+	game: Rummy,
+	numPlayers: 2,
+	board: RummyBoard,
+	multiplayer: Local(),
+	debug: { impl: Debug },
+});
 
 export default App;
