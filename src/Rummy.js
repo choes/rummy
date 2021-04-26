@@ -1,15 +1,16 @@
 import { PlayerView } from "boardgame.io/core";
 import { drop, draw, discard, finish, declare } from "./moves/cardPlayMoves";
-import { groupCards, sortCards } from "./moves/cardAreaMoves";
+import { groupCards, sortCards, unSortCards } from "./moves/cardAreaMoves";
 import {RedJokerCard, BlackJokerCard, Suits, Ranks }  from "./constants";
 import { compareCards } from "./moves/helper-functions/cardComparison";
+import { sortGroupedCards } from "./moves/helper-functions/cardsSorting";
 
 const Rummy = {
 	name: "rummy",
 	setup: setUp,
 	phases: {
 		play: {
-			moves: { groupCards, sortCards, drop, draw, discard, finish, declare },
+			moves: { groupCards, sortCards, unSortCards, drop, draw, discard, finish, declare },
 			endIf: G => {
 				for (let player in G.players) {
 					if (player.isFinished) {
@@ -24,7 +25,7 @@ const Rummy = {
 		},
 
 		declare: {
-			moves: { groupCards, sortCards, declare },
+			moves: { groupCards, sortCards, unSortCards, declare },
 			endIf: G => {
 				for (let player in G.players) {
 					if (!player.isDeclared) {
@@ -40,13 +41,13 @@ const Rummy = {
 	turn: {
 		stages: {
 			draw: {
-				moves: { drop, draw, groupCards, sortCards}
+				moves: { drop, draw, groupCards, sortCards, unSortCards }
 			},
 			discard: {
-				moves: { discard, finish, groupCards, sortCards }
+				moves: { discard, finish, groupCards, sortCards, unSortCards }
 			},
 			notTurn: {
-				moves: { groupCards, sortCards }
+				moves: { groupCards, sortCards, unSortCards }
 			},
 		},
 
@@ -128,6 +129,10 @@ function setUp(ctx) {
 		if (j === ctx.numPlayers) {
 			j = 0;
 		}
+	}
+
+	for (let i in players) {
+		players[i].groupedCards = sortGroupedCards(players[i].handCards, jokerCard);
 	}
 
 	return {

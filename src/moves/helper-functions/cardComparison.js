@@ -1,13 +1,13 @@
-import { Suits, Ranks, JokerCardRank, RedJokerCard } from "../../constants";
+import { Suits, Ranks, FaceJokerRank, RedJokerCard } from "../../constants";
 
 export function compareCards(card1, card2) {
-    if (card1.rank === JokerCardRank || card2.rank === JokerCardRank) {
-        if (card1.rank === JokerCardRank && card2.rank === JokerCardRank) {
+    if (card1.rank === FaceJokerRank || card2.rank === FaceJokerRank) {
+        if (card1.rank === FaceJokerRank && card2.rank === FaceJokerRank) {
             if (card1.suit !== card2.suit) {
                 return card1.suit === RedJokerCard.suit ? 1 : -1;
             }
         } else {
-            return card1.rank === JokerCardRank ? 1 : -1;
+            return card1.rank === FaceJokerRank ? 1 : -1;
         }
     } else {
         let rank1Position = Ranks.indexOf(card1.rank);
@@ -28,4 +28,15 @@ export function compareCards(card1, card2) {
     }
 
     return 0;
+}
+
+export function subtractCards(cards1, cards2) {
+    let subtraction = [];
+    for (let card1 of cards1) {
+        if (cards2.findIndex(card2 => card2.rank === card1.rank && card2.suit === card1.suit) < 0) {
+            subtraction.push(card1);
+        }
+    }
+
+    return subtraction;
 }
