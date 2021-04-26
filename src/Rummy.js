@@ -8,11 +8,6 @@ const Rummy = {
 	name: "rummy",
 	setup: setUp,
 	phases: {
-		tossCard: {
-			moves: {},
-			start: true
-		},
-
 		play: {
 			moves: { groupCards, sortCards, drop, draw, discard, finish, declare },
 			endIf: G => {
@@ -24,6 +19,7 @@ const Rummy = {
 
 				return false;
 			},
+            start: true,
 			next: "declare",
 		},
 
@@ -57,26 +53,25 @@ const Rummy = {
 		order: {
 			first: G => G.firstPlayer
 		},
+
+        activePlayers: {
+            currentPlayer: { stage: "draw" },
+            others: { stage: "notTurn" }
+        },
 	},
 
 	playerView: PlayerView.STRIP_SECRETS,
 	endIf: (G, ctx) => {
-		if (G.winner) {
+        let droppedCnt = 0;
+        for (let player in G.players) {
+            if (player.isDropped) {
+                droppedCnt++;
+            }
+        }
+
+		if (G.winner || (droppedCnt === ctx.numPlayers - 1) || (G.secret.closedDeck.length === 0)) {
 			return true;
-		} else {
-			let droppedCnt = 0;
-			for (let player in G.players) {
-				if (player.isDropped) {
-					droppedCnt++;
-				}
-			}
-
-			if (droppedCnt === ctx.numPlayers - 1) {
-				return true;
-			}
 		}
-
-		return false;
 	},
 };
 
@@ -93,6 +88,8 @@ function setUp(ctx) {
 		tossedCards = ctx.random.Shuffle(tossedCards);
 	}
 
+    tossedCards.splice(ctx.numPlayers, tossedCards.length - ctx.numPlayers);
+
 	let allCards = [RedJokerCard, BlackJokerCard];
 	for (let i = 0; i < 2; i++) {
 		for (let suit of Suits) {
@@ -107,14 +104,14 @@ function setUp(ctx) {
 		allCards = ctx.random.Shuffle(allCards);
 	}
 
-	const jokerCard = allCards[ctx.random.Die(allCards.length)];
+	const jokerCard = allCards[ctx.random.Die(allCards.length ) - 1];
 	let firstPlayer;
 	const players = {};
 	
 	for (let i = 0; i < ctx.numPlayers; i++) {
 		players[i] = {
+            handCards: [],
 			groupedCards: [],
-			tossedCard: tossedCards[i],
 			isSortCards: true
 		};
 
@@ -126,25 +123,17 @@ function setUp(ctx) {
 	const maxCardsCnt = 13;
 	const playerCards = allCards.splice(0, ctx.numPlayers * maxCardsCnt);
 	for (let i = 0, j = 0; i < playerCards.length; i++) {
-		players[j].groupedCards.push(playerCards[i]);
+		players[j].handCards.push(playerCards[i]);
 		j++;
 		if (j === ctx.numPlayers) {
 			j = 0;
 		}
 	}
 
-	setTimeout(() => {
-		ctx.events.setPhase("play");
-		ctx.events.setActivePlayers({
-			currentPlayer: { stage: "draw" },
- 			others: { stage: "notTurn" },
-		});
-	}, 3000);
-
 	return {
-		isTossOver: false,
 		finishSlot: null,
-		closedDeck: allCards,
+        tossedCards: tossedCards,
+        secret: { closedDeck: allCards },
 		openDeck: [],
 		winner: null,
 		jokerCard: jokerCard,
