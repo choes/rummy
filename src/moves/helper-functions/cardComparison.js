@@ -32,11 +32,23 @@ export function compareCards(card1, card2) {
 
 export function subtractCards(cards1, cards2) {
     let subtraction = [];
+    let idxes= {};
+    let rest = [];
+    
     for (let card1 of cards1) {
-        if (cards2.findIndex(card2 => card2.rank === card1.rank && card2.suit === card1.suit) < 0) {
+        let idx = cards2.findIndex(card2 => card2.rank === card1.rank && card2.suit === card1.suit);
+        if (idx < 0) {
             subtraction.push(card1);
+        } else {
+            idxes[idx] = true;
+        }
+    }
+    
+    for (let i = 0; i < cards2.length; i++) {
+        if (!idxes[i]) {
+            rest.push(cards2[i]);
         }
     }
 
-    return subtraction;
+    return { sub: subtraction, rest: rest };
 }
