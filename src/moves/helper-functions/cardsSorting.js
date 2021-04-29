@@ -27,7 +27,16 @@ function getGroupedCards(plainCards, jokerCards, restJokerCardCnt) {
             const checkedKeys = getCheckedKeys(plainCards[0], plainCards.length + restJokerCardCnt);
             for (let seqKey of checkedKeys.seqs) {
                 const seqLen = seqKey.length - 1;
-                const subInfo = subtractCards(validSeqs[seqLen][seqKey], plainCards);
+                let seqCards = validSeqs[seqLen][seqKey];
+                const subInfo = subtractCards(seqCards, plainCards);
+                if (subInfo.subtraction.length < seqCards.length) {
+                    if (subInfo.subtraction.length === 0) {
+
+                    } else {
+
+                    }
+                }
+                plainCards = subInfo.rest;
             }
         } else {
 

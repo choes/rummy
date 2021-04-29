@@ -305,291 +305,213 @@ export const validSeqs = {
         "H456789": [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
         "S456789": [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
 
-        "56789T":[
-            [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
-        ],
+        "D56789T": [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
+        "C56789T": [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
+        "H56789T": [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
+        "S56789T": [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
 
-        "6789TJ":[
-            [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
-            [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
-            [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-            [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
-        ],
+        "D6789TJ": [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
+        "C6789TJ": [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
+        "H6789TJ": [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
+        "S6789TJ": [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
-        "789TJQ":[
-            [ { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "D789TJQ": [ { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "C789TJQ": [ { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "H789TJQ": [ { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "S789TJQ": [ { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "89TJQK":[
-            [ { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-        ],
+        "D89TJQK": [ { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C89TJQK": [ { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "H89TJQK": [ { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "S89TJQK": [ { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
 
-        "9TJQKA":[
-            [ { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ],
+        "D9TJQKA": [ { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C9TJQKA": [ { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H9TJQKA": [ { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S9TJQKA": [ { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     7:{
-        "A234567":[
-            [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' } ],
-            [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' } ],
-            [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' } ],
-            [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' } ],
-        ],
+        "DA234567": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' } ],
+        "CA234567": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' } ],
+        "HA234567": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' } ],
+        "SA234567": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' } ],
 
-        "2345678":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' } ],
-        ],
+        "D2345678": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' } ],
+        "C2345678": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' } ],
+        "H2345678": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' } ],
+        "S2345678": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' } ],
 
-        "3456789":[
-            [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' } ],
-            [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' } ],
-            [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
-            [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
-        ],
+        "D3456789": [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' } ],
+        "C3456789": [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' } ],
+        "H3456789": [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
+        "S3456789": [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
 
-        "456789T":[
-            [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
-            [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
-            [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
-            [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
-        ],
+        "D456789T": [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
+        "C456789T": [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
+        "H456789T": [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
+        "S456789T": [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
 
-        "56789TJ":[
-            [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
-        ],
+        "D56789TJ": [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
+        "C56789TJ": [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
+        "H56789TJ": [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
+        "S56789TJ": [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
-        "6789TJQ":[
-            [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "D6789TJQ": [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "C6789TJQ": [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "H6789TJQ": [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "S6789TJQ": [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "789TJQK":[
-            [ { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
-            [ { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
-            [ { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
-        ],
+        "D789TJQK": [ { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C789TJQK": [ { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
+        "H789TJQK": [ { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
+        "S789TJQK": [ { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
 
-        "89TJQKA":[
-            [ { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ],
+        "D89TJQKA": [ { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C89TJQKA": [ { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H89TJQKA": [ { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S89TJQKA": [ { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     8:{
-        "A2345678":[
-        [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' } ],
-        [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' } ],
-        [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' } ],
-        [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' } ],
-        ],
+        "DA2345678": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' } ],
+        "CA2345678": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' } ],
+        "HA2345678": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' } ],
+        "SA2345678": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' } ],
 
-        "23456789":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
-        ],
+        "D23456789": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' } ],
+        "C23456789": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' } ],
+        "H23456789": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
+        "S23456789": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
 
-        "3456789T":[
-            [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
-            [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
-            [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
-            [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
-        ],
+        "D3456789T": [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
+        "C3456789T": [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
+        "H3456789T": [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
+        "S3456789T": [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
 
-        "456789TJ":[
-            [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
-            [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
-            [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-            [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
-        ],
+        "D456789TJ": [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
+        "C456789TJ": [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
+        "H456789TJ": [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
+        "S456789TJ": [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
-        "56789TJQ":[
-            [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "D56789TJQ": [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "C56789TJQ": [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "H56789TJQ": [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "S56789TJQ": [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "6789TJQK":[
-            [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
-            [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
-            [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
-        ],
+        "D6789TJQK": [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C6789TJQK": [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
+        "H6789TJQK": [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
+        "S6789TJQK": [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
 
-        "789TJQKA":[
-            [ { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ]
+        "D789TJQKA": [ { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C789TJQKA": [ { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H789TJQKA": [ { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S789TJQKA": [ { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     9:{
-        "A23456789":[
-            [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' } ],
-            [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' } ],
-            [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
-            [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
-        ],
+        "DA23456789": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' } ],
+        "CA23456789": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' } ],
+        "HA23456789": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' } ],
+        "SA23456789": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' } ],
 
-        "23456789T":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
-        ],
+        "D23456789T": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
+        "C23456789T": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
+        "H23456789T": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
+        "S23456789T": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
 
-        "3456789TJ":[
-            [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
-            [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
-            [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-            [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
-        ],
+        "D3456789TJ": [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
+        "C3456789TJ": [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
+        "H3456789TJ": [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
+        "S3456789TJ": [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
-        "456789TJQ":[
-            [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "D456789TJQ": [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "C456789TJQ": [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "H456789TJQ": [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "S456789TJQ": [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "56789TJQK":[
-            [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
-        ],
+        "D56789TJQK": [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C56789TJQK": [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
+        "H56789TJQK": [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
+        "S56789TJQK": [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
 
-        "6789TJQKA":[
-            [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ]
+        "D6789TJQKA": [ { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C6789TJQKA": [ { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H6789TJQKA": [ { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S6789TJQKA": [ { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     10:{
-        "A23456789T":[
-            [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
-            [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
-            [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
-            [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
-        ],
+        "DA23456789T": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' } ],
+        "CA23456789T": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' } ],
+        "HA23456789T": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' } ],
+        "SA23456789T": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' } ],
 
-        "23456789TJ":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
-        ],
+        "D23456789TJ": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
+        "C23456789TJ": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
+        "H23456789TJ": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
+        "S23456789TJ": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
-        "3456789TJQ":[
-            [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "D3456789TJQ": [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "C3456789TJQ": [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "H3456789TJQ": [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "S3456789TJQ": [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "456789TJQK":[
-            [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
-            [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
-            [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
-        ],
+        "D456789TJQK": [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C456789TJQK": [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
+        "H456789TJQK": [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
+        "S456789TJQK": [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
 
-        "56789TJQKA":[
-            [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ]
+        "D56789TJQKA": [ { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C56789TJQKA": [ { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H56789TJQKA": [ { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S56789TJQKA": [ { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     11:{
-        "A23456789TJ":[
-            [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
-            [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
-            [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-            [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
-        ],
+        "DA23456789TJ": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
+        "CA23456789TJ": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
+        "HA23456789TJ": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
+        "S23456789TJ": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
-        "23456789TJQ":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "D23456789TJQ": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "C23456789TJQ": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "H23456789TJQ": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "S23456789TJQ": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "3456789TJQK":[
-            [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
-            [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
-            [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
-        ],
+        "D3456789TJQK": [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C3456789TJQK": [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
+        "H3456789TJQK": [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
+        "S3456789TJQK": [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
 
-        "456789TJQKA":[
-            [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ],
+        "D456789TJQKA": [ { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C456789TJQKA": [ { suit: 'C', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H456789TJQKA": [ { suit: 'H', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S456789TJQKA": [ { suit: 'S', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     12:{
-        "A23456789TJQ":[
-            [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
-            [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
-            [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
-            [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
-        ],
+        "DA23456789TJQ": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
+        "CA23456789TJQ": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
+        "HA23456789TJQ": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' } ],
+        "SA23456789TJQ": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' } ],
 
-        "23456789TJQK":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
-        ],
+        "D23456789TJQK": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' } ],
+        "C23456789TJQK": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' } ],
+        "H23456789TJQK": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' } ],
+        "S23456789TJQK": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' } ],
 
-        "3456789TJQKA":[
-            [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ]
+        "D3456789TJQKA": [ { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C3456789TJQKA": [ { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H3456789TJQKA": [ { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S3456789TJQKA": [ { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 
     13:{
-        "23456789TJQKA":[
-            [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
-            [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
-            [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
-            [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
-        ]
+        "D23456789TJQKA": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' }, { suit: 'D', rank: 'K' }, { suit: 'D', rank: 'A' } ],
+        "C23456789TJQKA": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' }, { suit: 'C', rank: 'K' }, { suit: 'C', rank: 'A' } ],
+        "H23456789TJQKA": [ { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' }, { suit: 'H', rank: 'Q' }, { suit: 'H', rank: 'K' }, { suit: 'H', rank: 'A' } ],
+        "S23456789TJQKA": [ { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' }, { suit: 'S', rank: 'Q' }, { suit: 'S', rank: 'K' }, { suit: 'S', rank: 'A' } ],
     },
 }
