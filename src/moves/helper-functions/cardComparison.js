@@ -34,12 +34,14 @@ export function subtractCards(cards1, cards2) {
     let subtraction = [];
     let idxes= {};
     let rest = [];
+    let group = [];
     
     for (let card1 of cards1) {
         let idx = cards2.findIndex(card2 => card2.rank === card1.rank && card2.suit === card1.suit);
         if (idx < 0) {
             subtraction.push(card1);
         } else {
+            group.push(card1);
             idxes[idx] = true;
         }
     }
@@ -50,5 +52,5 @@ export function subtractCards(cards1, cards2) {
         }
     }
 
-    return { sub: subtraction, rest: rest };
+    return { sub: subtraction, group: group, rest: rest };
 }
