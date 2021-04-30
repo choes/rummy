@@ -2,7 +2,7 @@ export const FaceJokerRank = "1";
 export const RedJokerCard = { suit: "R", rank: FaceJokerRank };
 export const BlackJokerCard = { suit: "B", rank: FaceJokerRank };
 
-export const Suits = ["D", "C", "H", "S"];
+export const Suits = ["D", "C", "H", "S"]; // diamond, club, heart, spade
 
 export const Ranks = [
     "A",
@@ -477,7 +477,7 @@ export const validSeqs = {
         "DA23456789TJ": [ { suit: 'D', rank: 'A' }, { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' } ],
         "CA23456789TJ": [ { suit: 'C', rank: 'A' }, { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' } ],
         "HA23456789TJ": [ { suit: 'H', rank: 'A' }, { suit: 'H', rank: '2' }, { suit: 'H', rank: '3' }, { suit: 'H', rank: '4' }, { suit: 'H', rank: '5' }, { suit: 'H', rank: '6' }, { suit: 'H', rank: '7' }, { suit: 'H', rank: '8' }, { suit: 'H', rank: '9' }, { suit: 'H', rank: 'T' }, { suit: 'H', rank: 'J' } ],
-        "S23456789TJ": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
+        "SA23456789TJ": [ { suit: 'S', rank: 'A' }, { suit: 'S', rank: '2' }, { suit: 'S', rank: '3' }, { suit: 'S', rank: '4' }, { suit: 'S', rank: '5' }, { suit: 'S', rank: '6' }, { suit: 'S', rank: '7' }, { suit: 'S', rank: '8' }, { suit: 'S', rank: '9' }, { suit: 'S', rank: 'T' }, { suit: 'S', rank: 'J' } ],
 
         "D23456789TJQ": [ { suit: 'D', rank: '2' }, { suit: 'D', rank: '3' }, { suit: 'D', rank: '4' }, { suit: 'D', rank: '5' }, { suit: 'D', rank: '6' }, { suit: 'D', rank: '7' }, { suit: 'D', rank: '8' }, { suit: 'D', rank: '9' }, { suit: 'D', rank: 'T' }, { suit: 'D', rank: 'J' }, { suit: 'D', rank: 'Q' } ],
         "C23456789TJQ": [ { suit: 'C', rank: '2' }, { suit: 'C', rank: '3' }, { suit: 'C', rank: '4' }, { suit: 'C', rank: '5' }, { suit: 'C', rank: '6' }, { suit: 'C', rank: '7' }, { suit: 'C', rank: '8' }, { suit: 'C', rank: '9' }, { suit: 'C', rank: 'T' }, { suit: 'C', rank: 'J' }, { suit: 'C', rank: 'Q' } ],
