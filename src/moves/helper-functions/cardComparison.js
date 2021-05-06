@@ -39,16 +39,17 @@ export function subtractCards(cards1, cards2) {
     for (let card1 of cards1) {
         let idx = cards2.findIndex(card2 => card2.rank === card1.rank && card2.suit === card1.suit);
         if (idx < 0) {
-            subtraction.push(card1);
+            subtraction.push({ suit: card1.suit, rank: card1.rank });
         } else {
-            group.push(card1);
+            group.push({ suit: card1.suit, rank: card1.rank });
             idxes[idx] = true;
         }
     }
     
     for (let i = 0; i < cards2.length; i++) {
         if (!idxes[i]) {
-            rest.push(cards2[i]);
+            const card2 = cards2[i];
+            rest.push({ suit: card2.suit, rank: card2.rank });
         }
     }
 

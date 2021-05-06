@@ -24,12 +24,11 @@ export const RanksScore = {
     'A': 10, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'T': 10, 'J': 10, 'Q': 10, 'K': 10
 };
 
-export const Combinations = {
-    PURESEQUENCE: "Pure Sequence",
-    SEQUENCE: "Sequence",
-    SET: "Set",
-    INVALID: "Invalid"
-};
+export const Combinations = { PURESEQUENCE: 0, SEQUENCE: 1, SET: 2, INVALID: 3 };
+
+export const CombnationStr = [
+    "Pure Sequence", "Sequence", "Set", "Invalid"
+];
 
 export const validSets = {
     3:{
