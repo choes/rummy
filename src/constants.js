@@ -26,7 +26,7 @@ export const RanksScore = {
 
 export const Combinations = { PURESEQUENCE: 0, SEQUENCE: 1, SET: 2, INVALID: 3 };
 
-export const CombnationStr = [
+export const CombinationStr = [
     "Pure Sequence", "Sequence", "Set", "Invalid"
 ];
 
