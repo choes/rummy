@@ -312,9 +312,6 @@ function getUnknownGroupedCards(plainCards, jokerCards, restJokerCardsCnt) {
     }
 }
 
-//function concatGroupedCards(groupedCads) {
-//}
-
 function sortAllGroupedCards(allGroupedCards) {
     allGroupedCards.sort((group1, group2) => {
         const groupScore1 = getGroupScore(group1);
@@ -432,11 +429,52 @@ function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, checkedKeys)
             return getUnknownGroupedCards(plainCards, jokerCards, restJokerCardsCnt);
         }
 
-        sortAllGroupedCards(allGroupedCards); 
+        sortAllGroupedCards(allGroupedCards);
         return allGroupedCards[0];
-        // return concatGroupedCards(allGroupedCards[0]);
     } else {
         return getUnknownGroupedCards(plainCards, jokerCards, restJokerCardsCnt);
+    }
+}
+
+function adjustGroupedCards(groupedCards) {
+    groupedCards.sort((group1, group2) => {
+        if (group1.type === group2.type) {
+            const group1Rank = Ranks.indexOf(group1.cards[0].rank);
+            const group2Rank = Ranks.indexOf(group2.cards[0].rank);
+            if (group1Rank === group2Rank) {
+                const group1Suit = Suits.indexOf(group1.cards[0].suit);
+                const group2Suit = Suits.indexOf(group2.cards[0].suit);
+                return (group1Suit < group2Suit) ? -1 : (group1Suit > group2Suit ? 1 : 0);
+            } else {
+                return group1Rank < group2Rank ? -1 : 1;
+            }
+        } else {
+            return group1.type < group2.type ? -1 : 1;
+        }
+    });
+
+    let aloneInvalidCards = [];
+    for (let cardsInfo of groupedCards) {
+        if (cardsInfo.type === Combinations.INVALID && cardsInfo.cards.length === 1) {
+            aloneInvalidCards.push(cardsInfo.cards[0]);
+        }
+    }
+
+    if (aloneInvalidCards.length > 1) { // merge invalid cards.
+        for (let i = 0; i < groupedCards.length; i++) {
+            if (groupedCards[i].type === Combinations.INVALID) {
+                const invalidGrouepdCards = groupedCards.splice(i, groupedCards.length - i);
+                for (let cardsInfo of invalidGrouepdCards) {
+                    if (cardsInfo.cards.length > 1) {
+                        groupedCards.push(cardsInfo);
+                    }
+                }
+
+                groupedCards.push({ cards: aloneInvalidCards, type: Combinations.INVALID, score: getCardsScore(aloneInvalidCards) }); 
+
+                break;
+            }
+        }
     }
 }
 
@@ -480,5 +518,7 @@ export function sortGroupedCards(cards, jokerCard) {
         }
     }); 
 
-    return getGroupedCards(plainCards, jokerCards, jokerCards.length);
+    let groupedCards = getGroupedCards(plainCards, jokerCards, jokerCards.length);
+    adjustGroupedCards(groupedCards);
+    return groupedCards;
 }
