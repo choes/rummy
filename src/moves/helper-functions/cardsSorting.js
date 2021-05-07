@@ -368,18 +368,12 @@ function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, r
         if (subInfo.group.length === keyCards.length) {
             groupedCardsWithKeyCards.push({ cards: subInfo.group, type: isSeqKey ? Combinations.PURESEQUENCE : Combinations.SET });
         } else {
-            let cardsWithJoker = { cards: [], type: isSeqKey ? Combinations.SEQUENCE : Combinations.SET };
-            for (let card of subInfo.group) {
-                cardsWithJoker.cards.push(card);    
+            for (const card of subInfo.sub) {
+                if (card.isNeedJoker) {
+                    restJokerCardsCnt--;
+                }
             }
-
-            for (let card of subInfo.sub) {
-                card.isNeedJoker = true;
-                cardsWithJoker.cards.push(card);
-                restJokerCardsCnt--;
-            }
-
-            groupedCardsWithKeyCards.push(cardsWithJoker);
+            groupedCardsWithKeyCards.push({ cards: subInfo.sub, type: isSeqKey ? Combinations.SEQUENCE : Combinations.SET });
         }
 
         plainCards.splice(0, plainCards.length);
