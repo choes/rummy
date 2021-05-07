@@ -326,6 +326,91 @@ function getUnknownGroupedCards(plainCards, jokerCards, restJokerCardsCnt) {
 //function concatGroupedCards(groupedCads) {
 //}
 
+function sortAllGroupedCards(allGroupedCards) {
+    allGroupedCards.sort((group1, group2) => {
+        const groupScore1 = getGroupScore(group1);
+        const groupScore2 = getGroupScore(group1);
+        const combination1 = getCombinationCnt(group1);
+        const combination2 = getCombinationCnt(group2);
+
+        if (groupScore1 < groupScore2) {
+            return -1;
+        } else if (groupScore1 > groupScore2) {
+            return 1;
+        } else {
+            if (combination1.pureSeq !== combination2.pureSeq) {
+                return combination1.pureSeq > combination2.pureSeq ? -1 : 1;
+            } else if (combination1.seq !== combination2.seq) {
+                return combination1.seq > combination2.seq ? -1 : 1;    
+            } else if (combination1.set !== combination2.set) {
+                return combination1.set > combination2.set ? -1 : 1;    
+            } else {
+                return group1.length < group2.length ? -1 : (group1.length > group2.length ? 1 : 0);
+            }
+        }
+    });
+}
+
+function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys) {
+    const len = key.length - 1;
+    const isSeqKey = (keyType === "seq");
+    const keyCards = (isSeqKey ? validSeqs : validSets)[len][key];
+    const subInfo = subtractCards(keyCards, plainCards);
+    let isOver = false;
+    if ((subInfo.group.length > 0) && (subInfo.group.length + restJokerCardsCnt >= keyCards.length)) {
+        let clonedKeys = cloneNotCheckedKeys(notCheckedKeys);
+        let clonedPlainCards = cloneCards(plainCards);
+        let clonedRestJokerCardsCnt = restJokerCardsCnt;
+        clonedKeys[key] = true;
+        let clonedJokerCards = cloneCards(jokerCards);
+
+        let groupedCardsWithKeyCards = [];
+        if (subInfo.group.length === keyCards.length) {
+            groupedCardsWithKeyCards.push({ cards: subInfo.group, type: isSeqKey ? Combinations.PURESEQUENCE : Combinations.SET });
+        } else {
+            let cardsWithJoker = { cards: [], type: isSeqKey ? Combinations.SEQUENCE : Combinations.SET };
+            for (let card of subInfo.group) {
+                cardsWithJoker.cards.push(card);    
+            }
+
+            for (let card of subInfo.sub) {
+                card.isNeedJoker = true;
+                cardsWithJoker.cards.push(card);
+                restJokerCardsCnt--;
+            }
+
+            groupedCardsWithKeyCards.push(cardsWithJoker);
+        }
+
+        plainCards.splice(0, plainCards.length);
+        for (let card of subInfo.rest) {
+            plainCards.push(card);
+        }
+
+        const restGroupedCards = getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
+        if (restGroupedCards) {
+            for (let groupedCards of restGroupedCards) {
+                groupedCardsWithKeyCards.push(groupedCards);
+            }
+        }
+
+        pushGroupedCards(allGroupedCards, groupedCardsWithKeyCards, jokerCards);
+        if (getGroupScore(groupedCardsWithKeyCards) === 0) {
+            isOver = true;
+        } else {
+            const groupedCardsWithoutKeyCards = getGroupedCards(clonedPlainCards, clonedJokerCards, clonedRestJokerCardsCnt, clonedKeys) 
+            if (groupedCardsWithoutKeyCards) {
+                pushGroupedCards(allGroupedCards, groupedCardsWithoutKeyCards, clonedJokerCards);
+                if (getGroupScore(groupedCardsWithoutKeyCards) === 0) {
+                    isOver = true;
+                }
+            }
+        }
+    }
+
+    return { isOver : isOver, restJokerCardsCnt: restJokerCardsCnt };
+}
+
 function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys) {
     if (plainCards.length + restJokerCardsCnt === 0) return null;
     
@@ -335,117 +420,21 @@ function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKe
 
         const checkedKeys = getCheckedKeys(plainCards, restJokerCardsCnt, notCheckedKeys);
         for (let seqKey of checkedKeys.seqs) {
-            const seqLen = seqKey.length - 1;
-            const seqCards = validSeqs[seqLen][seqKey];
-            const subInfo = subtractCards(seqCards, plainCards);
-            if ((subInfo.group.length > 0) && (subInfo.group.length + restJokerCardsCnt >= seqCards.length)) {
-                let clonedKeys = cloneNotCheckedKeys(notCheckedKeys);
-                let clonedPlainCards = cloneCards(plainCards);
-                let clonedRestJokerCardsCnt = restJokerCardsCnt;
-                clonedKeys[seqKey] = true;
-                let clonedJokerCards = cloneCards(jokerCards);
-
-                let groupedCardsWithSeqCards = [];
-                if (subInfo.group.length === seqCards.length) {
-                    groupedCardsWithSeqCards.push({ cards: subInfo.group, type: Combinations.PURESEQUENCE });
-                } else {
-                    let cardsWithJoker = { cards: [], type: Combinations.SEQUENCE };
-                    for (let card of subInfo.group) {
-                        cardsWithJoker.cards.push(card);    
-                    }
-
-                    for (let card of subInfo.sub) {
-                        card.isNeedJoker = true;
-                        cardsWithJoker.cards.push(card);
-                        restJokerCardsCnt--;
-                    }
-
-                    groupedCardsWithSeqCards.push(cardsWithJoker);
-                }
-
-                plainCards.splice(0, plainCards.length);
-                for (let card of subInfo.rest) {
-                    plainCards.push(card);
-                }
-
-                const restGroupedCards = getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
-                if (restGroupedCards) {
-                    for (let groupedCards of restGroupedCards) {
-                        groupedCardsWithSeqCards.push(groupedCards);
-                    }
-                }
-
-                pushGroupedCards(allGroupedCards, groupedCardsWithSeqCards, jokerCards);
-                if (getGroupScore(groupedCardsWithSeqCards) === 0) {
-                    isOver = true;
-                    break;
-                }
-
-                const groupedCardsWithoutSeqCards = getGroupedCards(clonedPlainCards, clonedJokerCards, clonedRestJokerCardsCnt, clonedKeys) 
-                if (groupedCardsWithoutSeqCards) {
-                    pushGroupedCards(allGroupedCards, groupedCardsWithoutSeqCards, clonedJokerCards);
-                    if (getGroupScore(groupedCardsWithoutSeqCards) === 0) {
-                        isOver = true;
-                        break;
-                    }
-                }
+            const ret = procCheckedKey("seq", seqKey, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
+            isOver = ret.isOver;
+            restJokerCardsCnt = ret.restJokerCardsCnt; 
+            if (isOver) {
+                break;
             }
         }
 
         if (!isOver) {
             for (let setKey of checkedKeys.sets) {
-                const setLen = setKey.length - 1;
-                const setCards = validSets[setLen][setKey];
-
-                const subInfo = subtractCards(setCards, plainCards);
-                if ((subInfo.group.length > 0) && (subInfo.group.length + restJokerCardsCnt >= setCards.length)) {
-                    let clonedKeys = cloneNotCheckedKeys(notCheckedKeys);
-                    clonedKeys[setKey] = true;
-                    let clonedJokerCards = cloneCards(jokerCards);
-                    let clonedPlainCards = cloneCards(plainCards);
-                    let clonedRestJokerCardsCnt = restJokerCardsCnt;
-
-                    let groupedCardsWithSetCards = [];
-                    if (subInfo.group.length === setCards.length) {
-                        groupedCardsWithSetCards.push({ cards: subInfo.group, type: Combinations.SET });
-                    } else {
-                        let cardsWithJoker = { cards: [], type: Combinations.SET };
-                        for (let card of subInfo.group) {
-                            cardsWithJoker.cards.push(card);    
-                        }
-
-                        for (let card of subInfo.sub) {
-                            card.isNeedJoker = true;
-                            cardsWithJoker.cards.push(card);
-                            restJokerCardsCnt--; 
-                        }
-
-                        groupedCardsWithSetCards.push(cardsWithJoker);
-                    }
-
-                    plainCards.splice(0, plainCards.length);
-                    for (let card of subInfo.rest) {
-                        plainCards.push(card);
-                    }
-                    const restGroupedCards = getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
-                    if (restGroupedCards) {
-                        for (let groupedCards of restGroupedCards) {
-                            groupedCardsWithSetCards.push(groupedCards);
-                        }
-                    }
-
-                    pushGroupedCards(allGroupedCards, groupedCardsWithSetCards, jokerCards);
-                    if (getGroupScore(groupedCardsWithSetCards) === 0) {
-                        break;
-                    }
-                    
-                    const groupedCardsWithoutSetCards = getGroupedCards(clonedPlainCards, clonedJokerCards, clonedRestJokerCardsCnt, clonedKeys) 
-                    if (groupedCardsWithoutSetCards) {
-                        pushGroupedCards(allGroupedCards, groupedCardsWithoutSetCards, clonedJokerCards);
-                        if (getGroupScore(groupedCardsWithoutSetCards) === 0) {
-                            break;
-                        }
-                    }
+                const ret = procCheckedKey("set", setKey, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
+                isOver = ret.isOver;
+                restJokerCardsCnt = ret.restJokerCardsCnt;  
+                if (isOver) {
+                    break;
                 }
             }
         }
@@ -454,29 +443,7 @@ function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKe
             return getUnknownGroupedCards(plainCards, jokerCards, restJokerCardsCnt);
         }
 
-        allGroupedCards.sort((group1, group2) => {
-            const groupScore1 = getGroupScore(group1);
-            const groupScore2 = getGroupScore(group1);
-            const combination1 = getCombinationCnt(group1);
-            const combination2 = getCombinationCnt(group2);
-
-            if (groupScore1 < groupScore2) {
-                return -1;
-            } else if (groupScore1 > groupScore2) {
-                return 1;
-            } else {
-                if (combination1.pureSeq !== combination2.pureSeq) {
-                    return combination1.pureSeq > combination2.pureSeq ? -1 : 1;
-                } else if (combination1.seq !== combination2.seq) {
-                    return combination1.seq > combination2.seq ? -1 : 1;    
-                } else if (combination1.set !== combination2.set) {
-                    return combination1.set > combination2.set ? -1 : 1;    
-                } else {
-                    return group1.length < group2.length ? -1 : (group1.length > group2.length ? 1 : 0);
-                }
-            }
-        });
-
+        sortAllGroupedCards(allGroupedCards); 
         return allGroupedCards[0];
         // return concatGroupedCards(allGroupedCards[0]);
     } else {
