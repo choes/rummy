@@ -1,5 +1,5 @@
-import { FaceJokerRank, validSets, validSeqs, Suits, Ranks, RanksScore, Combinations, BlackJokerCard} from "../../constants";
-import { subtractCards } from "./cardComparison";
+import { FaceJokerRank, validSets, validSeqs, Suits, Ranks, Combinations, BlackJokerCard } from "../../constants";
+import { subtractCards, getCardsScore, sortPlainCards, getCombinationCnt, calcGroupedCardsScore } from "./cardsOperation";
 
 function isJokerCard(card, jokerCard) {
     return card.rank === FaceJokerRank  ||
@@ -127,53 +127,6 @@ function cloneCards(cards) {
     }
 
     return clonedCards;
-}
-
-function getCombinationCnt(groupedCards) {
-    let purSeqCnt = 0;
-    let seqCnt = 0;
-    let setCnt = 0;
-    let invaldCnt = 0;
-    for (let cardsInfo of groupedCards) {
-        if (cardsInfo.type === Combinations.PURESEQUENCE) {
-            purSeqCnt++;
-        } else if (cardsInfo.type === Combinations.SEQUENCE) {
-            seqCnt++;
-        } else if (cardsInfo.type === Combinations.SET) {
-            setCnt++;
-        } else {
-            invaldCnt++;
-        }
-    }
-
-    return { pureSeq: purSeqCnt, seq: seqCnt, set: setCnt, invalid: invaldCnt };
-}
-
-function getCardsScore(cards) {
-    let score = 0;
-    for (let card of cards) {
-        score += (card.isJoker || card.isNeedJoker) ? 0 : RanksScore[card.rank];
-    }
-
-    return score;
-}
-
-function calcGroupedCardsScore(groupedCards) {
-    const combinations = getCombinationCnt(groupedCards);
-
-    for (let cardsInfo of groupedCards) {
-        if (cardsInfo.type === Combinations.PURESEQUENCE) {
-            cardsInfo.score = 0;
-        } else if (cardsInfo.type === Combinations.SEQUENCE || cardsInfo.type === Combinations.SET) {
-            if ((combinations.pureSeq > 0) && (combinations.pureSeq + combinations.seq >= 2)) {
-                cardsInfo.score = 0;
-            } else {
-                cardsInfo.score = getCardsScore(cardsInfo.cards);
-            }
-        } else {
-            cardsInfo.score = getCardsScore(cardsInfo.cards);
-        }
-    }
 }
 
 function isNeedJokerCard(cards) {
@@ -490,20 +443,7 @@ export function sortGroupedCards(cards, jokerCard) {
         }
     }
 
-    plainCards.sort((card1, card2) => {
-        let idx1 = Ranks.indexOf(card1.rank);
-        let idx2 = Ranks.indexOf(card2.rank);
-        if (idx1 < idx2) {
-            return -1;
-        } else if (idx1 > idx2) {
-            return 1;
-        } else {
-            const suitIdx1 = Suits.indexOf(card1.suit); 
-            const suitIdx2 = Suits.indexOf(card2.suit);
-            return suitIdx1 < suitIdx2 ? -1 : (suitIdx1 > suitIdx2 ? 1 : 0);
-        }
-    });
-
+    sortPlainCards(plainCards);
     jokerCards.sort((card1, card2) => {
         if (card1.rank !== FaceJokerRank && card2.rank !== FaceJokerRank) {
             const suitIdx1 = Suits.indexOf(card1.suit); 

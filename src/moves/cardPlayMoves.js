@@ -1,7 +1,9 @@
 import { sortGroupedCards } from "./helper-functions/cardsSorting";
 
 export function drop(G, ctx) {
-
+    const currentPlayer = ctx.currentPlayer;
+    const player = G.players[currentPlayer];
+    player.isDropped = true;
 }
 
 export function draw(G, ctx, deck) {
@@ -9,6 +11,10 @@ export function draw(G, ctx, deck) {
     if (deck === "closed") {
         [card] = G.secret.closedDeck.splice(0, 1);
     } else {
+        [card] = G.openDeck.splice(0, 1);
+    }
+
+    if (card) {
         let currentPlayer = ctx.currentPlayer;
         let player = G.players[currentPlayer];
         player.handCards.push(card);
@@ -23,11 +29,11 @@ export function draw(G, ctx, deck) {
     }
 }
 
-export function discard(G, ctx, card) {
-    
+export function discard(G, ctx, card, index) {
+
 }
 
-export function finish(G, ctx, card) {
+export function finish(G, ctx, card, index) {
 
 }
 

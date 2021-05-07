@@ -2,7 +2,7 @@ import { PlayerView } from "boardgame.io/core";
 import { drop, draw, discard, finish, declare } from "./moves/cardPlayMoves";
 import { groupCards, sortCards, unSortCards } from "./moves/cardAreaMoves";
 import {RedJokerCard, BlackJokerCard, Suits, Ranks }  from "./constants";
-import { compareCards } from "./moves/helper-functions/cardComparison";
+import { compareCards } from "./moves/helper-functions/cardsOperation";
 import { sortGroupedCards } from "./moves/helper-functions/cardsSorting";
 
 const Rummy = {
