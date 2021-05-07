@@ -7,7 +7,7 @@ function isJokerCard(card, jokerCard) {
            (jokerCard.rank === FaceJokerRank && card.rank === 'A'); // 'A' as a substitute to any card if the joker card is a face joker.
 }
 
-function getCheckedKeys(cards, jokerCardsCnt, notCheckedKeys) {
+function getCheckedKeys(cards, jokerCardsCnt) {
     let keys = { sets: [], seqs: [] };
 
     if ((cards.length > 0) && (cards.length + jokerCardsCnt >= 3)) {
@@ -75,9 +75,7 @@ function getCheckedKeys(cards, jokerCardsCnt, notCheckedKeys) {
                             seqKey += (rankIdx === Ranks.length ? 'A' : Ranks[rankIdx]);
                         }
                         
-                        if (!notCheckedKeys[seqKey]) {
-                            keys.seqs.push(seqKey);
-                        }
+                        keys.seqs.push(seqKey);
                     }
                 }
             }
@@ -101,14 +99,14 @@ function getCheckedKeys(cards, jokerCardsCnt, notCheckedKeys) {
             maxSetCnt += jokerCardsCnt;
             if (maxSetCnt >= 3) {
                 for (let key in validSets[3]) {
-                    if (key[3] === cards[beg].rank && !notCheckedKeys[key]) {
+                    if (key[3] === cards[beg].rank) {
                         keys.sets.push(key);
                     }
                 } 
 
                 if (maxSetCnt >= 4) {
                     for (let key in validSets[4]) {
-                        if (key[4] === cards[beg].rank && !notCheckedKeys[key]) {
+                        if (key[4] === cards[beg].rank) {
                             keys.sets.push(key);
                         }
                     }
@@ -120,15 +118,6 @@ function getCheckedKeys(cards, jokerCardsCnt, notCheckedKeys) {
     }
 
     return keys;
-}
-
-function cloneNotCheckedKeys(keys) {
-    let cloneKeys = {};
-    for (let key in keys) {
-        cloneKeys[key] = true;
-    }
-
-    return cloneKeys;
 }
 
 function cloneCards(cards) {
@@ -351,17 +340,15 @@ function sortAllGroupedCards(allGroupedCards) {
     });
 }
 
-function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys) {
+function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, checkedKeys) {
     const len = key.length - 1;
     const isSeqKey = (keyType === "seq");
     const keyCards = (isSeqKey ? validSeqs : validSets)[len][key];
     const subInfo = subtractCards(keyCards, plainCards);
     let isOver = false;
     if ((subInfo.group.length > 0) && (subInfo.group.length + restJokerCardsCnt >= keyCards.length)) {
-        let clonedKeys = cloneNotCheckedKeys(notCheckedKeys);
         let clonedPlainCards = cloneCards(plainCards);
         let clonedRestJokerCardsCnt = restJokerCardsCnt;
-        clonedKeys[key] = true;
         let clonedJokerCards = cloneCards(jokerCards);
 
         let groupedCardsWithKeyCards = [];
@@ -381,7 +368,7 @@ function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, r
             plainCards.push(card);
         }
 
-        const restGroupedCards = getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
+        const restGroupedCards = getGroupedCards(plainCards, jokerCards, restJokerCardsCnt);
         if (restGroupedCards) {
             for (let groupedCards of restGroupedCards) {
                 groupedCardsWithKeyCards.push(groupedCards);
@@ -392,7 +379,15 @@ function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, r
         if (getGroupScore(groupedCardsWithKeyCards) === 0) {
             isOver = true;
         } else {
-            const groupedCardsWithoutKeyCards = getGroupedCards(clonedPlainCards, clonedJokerCards, clonedRestJokerCardsCnt, clonedKeys) 
+            let keys = isSeqKey ? checkedKeys.seqs : checkedKeys.sets;
+            for (let i = 0; i < keys.length; i++) {
+                if (keys[i] === key) {
+                    keys.splice(i, 1);
+                    break;    
+                }
+            }
+
+            const groupedCardsWithoutKeyCards = getGroupedCards(clonedPlainCards, clonedJokerCards, clonedRestJokerCardsCnt, checkedKeys) 
             if (groupedCardsWithoutKeyCards) {
                 pushGroupedCards(allGroupedCards, groupedCardsWithoutKeyCards, clonedJokerCards);
                 if (getGroupScore(groupedCardsWithoutKeyCards) === 0) {
@@ -405,16 +400,16 @@ function procCheckedKey(keyType, key, allGroupedCards, plainCards, jokerCards, r
     return { isOver : isOver, restJokerCardsCnt: restJokerCardsCnt };
 }
 
-function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys) {
+function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, checkedKeys) {
     if (plainCards.length + restJokerCardsCnt === 0) return null;
     
     if ((plainCards.length > 0) && (plainCards.length + restJokerCardsCnt >= 3)) {
         let allGroupedCards = [];
         let isOver = false;
 
-        const checkedKeys = getCheckedKeys(plainCards, restJokerCardsCnt, notCheckedKeys);
-        for (let seqKey of checkedKeys.seqs) {
-            const ret = procCheckedKey("seq", seqKey, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
+        let needCheckedKeys = checkedKeys ? checkedKeys : getCheckedKeys(plainCards, restJokerCardsCnt);
+        for (let seqKey of needCheckedKeys.seqs) {
+            const ret = procCheckedKey("seq", seqKey, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, needCheckedKeys);
             isOver = ret.isOver;
             restJokerCardsCnt = ret.restJokerCardsCnt; 
             if (isOver) {
@@ -423,8 +418,8 @@ function getGroupedCards(plainCards, jokerCards, restJokerCardsCnt, notCheckedKe
         }
 
         if (!isOver) {
-            for (let setKey of checkedKeys.sets) {
-                const ret = procCheckedKey("set", setKey, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, notCheckedKeys);
+            for (let setKey of needCheckedKeys.sets) {
+                const ret = procCheckedKey("set", setKey, allGroupedCards, plainCards, jokerCards, restJokerCardsCnt, needCheckedKeys);
                 isOver = ret.isOver;
                 restJokerCardsCnt = ret.restJokerCardsCnt;  
                 if (isOver) {
@@ -485,5 +480,5 @@ export function sortGroupedCards(cards, jokerCard) {
         }
     }); 
 
-    return getGroupedCards(plainCards, jokerCards, jokerCards.length, {});
+    return getGroupedCards(plainCards, jokerCards, jokerCards.length);
 }
