@@ -1,7 +1,7 @@
 import { PlayerView } from "boardgame.io/core";
 import { drop, draw, discard, finish, declare } from "./moves/cardPlayMoves";
 import { groupCards, sortCards, unSortCards } from "./moves/cardAreaMoves";
-import {RedJokerCard, BlackJokerCard, Suits, Ranks }  from "./constants";
+import { RedJokerCard, BlackJokerCard, Suits, Ranks }  from "./constants";
 import { compareCards } from "./moves/helper-functions/cardsOperation";
 import { sortGroupedCards } from "./moves/helper-functions/cardsSorting";
 
@@ -10,10 +10,13 @@ const Rummy = {
 	setup: setUp,
 	phases: {
 		play: {
-			moves: { groupCards, sortCards, unSortCards, drop, draw, discard, finish, declare },
+			moves: {
+				draw: { move: draw, client: false },
+				groupCards, sortCards, unSortCards, drop, discard, finish, declare
+			},
 			endIf: G => {
-				for (let player in G.players) {
-					if (player.isFinished) {
+				for (let i in G.playersState) {
+					if (G.playersState[i].isFinished) {
 						return true;
 					}
 				}
@@ -27,8 +30,8 @@ const Rummy = {
 		declare: {
 			moves: { groupCards, sortCards, unSortCards, declare },
 			endIf: G => {
-				for (let player in G.players) {
-					if (!player.isDeclared) {
+				for (let i in G.playersState) {
+					if (!G.playersState[i].isDeclared) {
 						return false;
 					}
 				}
@@ -41,7 +44,10 @@ const Rummy = {
 	turn: {
 		stages: {
 			draw: {
-				moves: { drop, draw, groupCards, sortCards, unSortCards }
+				moves: {
+					draw: { move: draw, client: false },
+					drop, groupCards, sortCards, unSortCards
+				}
 			},
 			discard: {
 				moves: { discard, finish, groupCards, sortCards, unSortCards }
@@ -49,6 +55,9 @@ const Rummy = {
 			notTurn: {
 				moves: { groupCards, sortCards, unSortCards }
 			},
+			dropped: {
+				moves: {}
+			}
 		},
 
 		order: {
@@ -64,8 +73,8 @@ const Rummy = {
 	playerView: PlayerView.STRIP_SECRETS,
 	endIf: (G, ctx) => {
         let droppedCnt = 0;
-        for (let player in G.players) {
-            if (player.isDropped) {
+        for (let i in G.playersState) {
+            if (G.playersState[i].isDropped) {
                 droppedCnt++;
             }
         }
@@ -108,6 +117,7 @@ function setUp(ctx) {
 	const jokerCard = allCards[ctx.random.Die(allCards.length ) - 1];
 	let firstPlayer;
 	const players = {};
+	const playersState = {};
 	
 	for (let i = 0; i < ctx.numPlayers; i++) {
 		players[i] = {
@@ -115,6 +125,12 @@ function setUp(ctx) {
 			groupedCards: [],
 			isSortCards: true
 		};
+
+		playersState[i]	= {
+			isDropped: false,
+			isDeclared: false,
+			isFinished: false,
+		}
 
 		if (i === 0 || compareCards(tossedCards[i], tossedCards[i - 1]) > 0) {
 			firstPlayer = i;
@@ -143,6 +159,7 @@ function setUp(ctx) {
 		winner: null,
 		jokerCard: jokerCard,
 		players: players,
+		playersState: playersState,
 		firstPlayer: firstPlayer,
 	};
 }
