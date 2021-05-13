@@ -116,21 +116,19 @@ export function getCardsType(cards) {
             } else {
                 const seqKeys = validSeqs[cards.length];
                 for (const key in seqKeys) {
-                    const seqCards = seqKeys[key]
+                    const seqCards = seqKeys[key];
                     const subInfo = subtractCards(seqCards, plainCards);
                     if (subInfo.group.length === seqCards.length) {
                         return Combinations.PURESEQUENCE;
                     } else if (subInfo.group.length + jokerCards.length === seqCards.length) {
                         return Combinations.SEQUENCE;
-                    } else {
-                        return Combinations.INVALID;
                     }
                 }
             }
         }
-    } else {
-        return Combinations.INVALID;
     }
+    
+    return Combinations.INVALID;
 }
 
 export function getCombinationCnt(groupedCards) {
